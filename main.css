@@ -1,0 +1,17 @@
+body {
+  background-color: lightblue;
+}
+
+.main-title {
+  color: red;
+}
+
+.hours:after,
+.minutes:after {
+  content: ':'
+}
+
+.start {
+  background-color: green;
+  outline: none;
+}
