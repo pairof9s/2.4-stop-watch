@@ -3,6 +3,10 @@
   'use strict';
 
   var startButton = document.getElementsById('start-button');
+  var hours = document.querySelector('.hours')
+  var minutes = document.querySelector('.minutes')
+  var seconds = document.querySelector('.seconds')
+
   var startTime;
 
   console.log(startButton);
@@ -19,10 +23,34 @@
     }
   }
 
+  function millisecondsToInterval(ms) {
+    var numMsInHour = 60000 * 60;
+    var numMsInMinute = 60000;
+    var numMsInSecond = 1000;
+
+    var hourCount = Math.floor(ms / numMsInHour);
+    var minuteCount = Math.floor (ms / numMsInMinute);
+    var secondCount = Math.floor (ms / numMsInSecond);
+  }
+
+  function logElapsedTime() {
+    var currentTime = new Date();
+    var elapsedTime = currentTime - startTime;
+    var elapsed = millisecondsToInterval(elapsedTime);
+
+    return [hours, minutes, seconds];
+  }
+
+  function displayInterval(interval) {
+    hours.textContent = ("0" + interval[0]).slice(-2);
+    minutes.textContent = ("0" + interval[1]).slice(-2);
+    seconds.textContent = ("0" + interval[2]).slice(-2);
+  }
+
   function startButtonHandler() {
     startTime = new Date();
     toggleButton();
-    window.setInterval();
+    window.setInterval(logElapsedTime, 1000);
   }
 
   startButton.addEventListener('click', startButtonHandler);
