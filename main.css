@@ -1,9 +1,14 @@
 body {
   background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.main-title {
-  color: red;
+.container {
+  width: 100%;
+  height: 1000px;
+  background-color: red;
 }
 
 .hours:after,
@@ -11,7 +16,16 @@ body {
   content: ':'
 }
 
-.start {
-  background-color: green;
-  outline: none;
+.clock {
+  text-align: center;
+  font-size: 72px;
+  font-family: sans-serif;
+  padding-top: 100px;
+}
+
+hr {
+  margin-top: 20px;
+  height: 10px;
+  background-color: red;
+  border: 0;
 }
