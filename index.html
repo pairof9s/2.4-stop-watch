@@ -5,17 +5,19 @@
     <title>D9 Stop Watch</title>
     <!-- ** CSS files ** -->
     <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Caveat+Brush' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="container">
-      <h1 class="clock">
-        <span class='hours'>00</span>
-        <span class='minutes'>00</span>
-        <span class='seconds'>00</span>
-      </h1>
-
-      <hr id='progress-bar' />
-    </div>
+      <div class="clock-box">
+        <div class="clock">
+          <span class='hours'>00</span>
+          <span class='minutes'>00</span>
+          <span class='seconds'>00</span>
+          <hr id='progress-bar' />
+        </div>
+      </div> <!-- close clock-box -->
+    </div> <!-- close container -->
 
     <script src='main.js'></script><!-- <script type="text/javascript" src="watch.js"></script> ** training script to watch.js code ** -->
 
